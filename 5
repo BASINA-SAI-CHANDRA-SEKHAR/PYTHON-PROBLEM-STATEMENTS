@@ -1,0 +1,16 @@
+# YOU ARE GIVEN ARRAY A HAVING SOME DIVIDENDS FURTHER YOU ARE GIVEN 3 NUMBERS D,Q AND R. A DIVIDEND CAN BE FOUND USING A RULE THAT STATES 
+# DIVIDEND= DIVISIOR * QUOTIENT + REMAINDER
+# YOUR TASK IS TO FIND AND RETURN AN INTEGER VALUE REPRESENTING THE INDEX OF THE DIVIDEND IF PRESENT IN ARRAY.IF DIVIDEND NOT FOUND RETURN -1
+
+arr=list(map(int,input().split()))
+n=len(arr)
+divisior=int(input())
+quotient=int(input())
+remainder=int(input())
+dividend=divisior*quotient+remainder
+for i in range(n):
+        if arr[i]==dividend:
+            print(i)
+            break
+else:
+    print(-1)
