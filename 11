@@ -1,0 +1,22 @@
+Problem statement:
+An odd number is an integer which is not a multiple of 2.
+You are required to implement the following function: int SumOddIntegers(int arr[], int n); The function accepts an integer array ‘arr’ of length ‘n’ as its argument. 
+You are required to calculate the sum of all odd integers in an array ‘arr’ and return the same.
+
+Note:
+Array can have negative integers
+n > 0
+Computed values lie within integer range"
+
+
+
+def SumOddIntegers(arr,n):
+    n=len(arr)
+    count=0
+    if n>0:
+        for i in range(n):
+            if arr[i]%2!=0:
+                count+=arr[i]
+    return count
+arr=[-1,2,3,-4,5]
+print(SumOddIntegers(arr,n))
