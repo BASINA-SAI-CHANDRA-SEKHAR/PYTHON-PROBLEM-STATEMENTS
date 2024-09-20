@@ -1,0 +1,9 @@
+# You are given a string, which contains some consonants and vowels in lowercase letters. You need to print the maximum frequency of all the vowels present in the string.
+
+string="sai chandu"
+vowels="aeiou"
+count=0
+for i in string:
+    if i in vowels:
+        count+=1
+count
