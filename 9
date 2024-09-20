@@ -1,0 +1,13 @@
+#You are given an array of length n and index k, where 0<k<n. You need to print the absolute difference between the sum of elements to the left of index k and sum of elements to the right of index k.
+
+arr=[1,2,3,4,5,6,7,8,9,10]
+k=5
+n=len(arr)
+if k<n+1:
+    c=arr[0:k-1]
+    d=arr[k:]
+    e=sum(c)
+    f=sum(d)
+    print(abs(e-f))
+else:
+    print("not valid")
