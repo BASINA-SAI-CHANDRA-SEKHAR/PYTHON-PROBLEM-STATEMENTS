@@ -1,0 +1,24 @@
+# Write a function that takes a string and determines if the average length of the words in the string is greater than 4. 
+#If the average word length is greater than 4, the function should return 1; otherwise, it should return 0.
+
+# Input Format:
+# The input consists of a single string. The string contains words separated by spaces.
+
+# Output Format:
+# A single integer: 1 if the average word length is greater than 4, 0 otherwise.
+
+# Example:
+# Input:
+# The quick brown fox jumps over the lazy dog
+# Output:
+# 0
+
+string=list(map(str,input().split(" ")))
+avg=0
+for words in string:
+    avg=avg+len(words)
+avg /= len(string)
+if avg>4:
+    print(1,end="")
+else:
+    print(0,end="")
