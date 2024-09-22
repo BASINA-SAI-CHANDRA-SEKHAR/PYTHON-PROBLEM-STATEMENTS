@@ -1,0 +1,21 @@
+# Calculate the difference between the sum of elements at odd indices and the XOR of elements at even indices in an integer array.
+# Input:
+# An integer ( N ) representing the length of the array.
+# An integer array ( A ).
+# Output: The difference between the sum of elements at odd indices and the XOR of elements at even indices.
+# Example:
+
+# Input: ( N = 6 ), ( A = [10,5,6,3,7,2] )
+# Output: (-1)
+
+arr=list(map(int,input().split()))
+n=len(arr)
+sum1=0
+sum2=0
+for i in range(n):
+    if i%2==0:
+        sum1=sum1^arr[i]
+    else:
+        sum2=sum2+arr[i]
+c=sum2-sum1
+print(c)
