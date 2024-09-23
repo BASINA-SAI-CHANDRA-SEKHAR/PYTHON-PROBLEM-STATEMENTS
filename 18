@@ -1,0 +1,26 @@
+Task:  If the absolute difference between the number of white spaces in two strings, A and B, is divisible by 2. If it is, you print “Even”; otherwise, you print “Odd”. 
+
+Input: 
+sai chandu sai  (white spaces=2)
+sai chandu    (white spaces=1)
+
+output::
+odd       abs(2-1)=1
+
+
+
+def even(str):
+    count=0
+    for i in str:
+        if i==' ':
+            count+=1
+    return count
+str1=input()
+str2=input()
+print(even(str1))
+print(even(str2))
+d=abs(even(str1)-even(str2))
+if d%2==0:
+    print("even")
+else:
+    print("odd")
