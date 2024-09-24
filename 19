@@ -1,0 +1,12 @@
+# problem statement about finding the count of occurrences of the second largest element in an array.
+arr=[1,2,3,4,5,4,4]
+first=second=float('-inf')
+n=len(arr)
+first=arr[0]
+for i in range(n):
+    if arr[i]>first:
+        second=first
+        first=arr[i]
+    elif arr[i]>second and arr[i]!=first:
+        second=arr[i]
+print(arr.count(second))
