@@ -1,0 +1,19 @@
+You are given two input strings: input1 and input3, along with an integer input2 that represents the size of input1. 
+Write a program that performs the following tasks: Write a function countOccurrences that counts how many times the string input3 appears in the string input1.
+
+e.g. Input1: ‘abcc’ 
+Input2:4  
+Input3: ‘c’
+output:2
+
+def countOccurrences(input1,input3):
+    count=0
+    for char in input1:
+        if char in input3:
+            count+=1
+    return count
+input1=input()
+input3=input()
+input2=len(input1)
+print("len of input1",input2)
+print(countOccurrences(input1,input3))
