@@ -1,0 +1,31 @@
+# Write a program that accepts a space-separated string of integers representing a sequence of even length. 
+# The program should determine whether the sequence is left-heavy, right-heavy, or balanced. It should print:
+
+# -1 if the sequence is left-heavy (left half sum > right half sum).
+# 1 if the sequence is right-heavy (right half sum > left half sum).
+# 0 if the sequence is balanced (both sums are equal).
+# Input Format:
+# The input consists of a single line containing space-separated integers.
+# Output Format:
+# A single integer: -1 for left-heavy, 1 for right-heavy, or 0 for balanced.
+# Example:
+# Input:
+# 1 2 3 4 5 6
+# Output:
+# 1
+
+
+s=input().split(' ')
+right=0
+left=0
+l=[int(num) for num in s]
+for i in range(len(l)//2):
+    left+=l[i]
+for i in range(len(l)//2,len(l)):
+    right+=l[i]
+if left>right:
+    print(-1)
+elif left<right:
+    print(1)
+else:
+    print(0)
